@@ -44,7 +44,7 @@ def download_audio():
                 'preferredcodec': 'mp3',
                 'preferredquality': '192',
             }],
-            'ffmpeg_location': 'ffmpeg',
+            'ffmpeg_location': '/usr/bin/ffmpeg',
             'quiet': False,
             'verbose': True,
         }
