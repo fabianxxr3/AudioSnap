@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
 # Carpeta de trabajo
 WORKDIR /app
 
-# Copiar archivos de la app
+# Copiar todos los archivos (incluido cookies.txt, backend.py, requirements.txt, etc.)
 COPY . .
 
 # Instalar dependencias Python
