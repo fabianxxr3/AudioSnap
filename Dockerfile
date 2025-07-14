@@ -6,17 +6,17 @@ RUN apt-get update && apt-get install -y \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
-# Crea carpeta de trabajo
+# Carpeta de trabajo
 WORKDIR /app
 
-# Copia los archivos
+# Copiar archivos de la app
 COPY . .
 
-# Instala las dependencias
+# Instalar dependencias Python
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Expone el puerto de Flask
-EXPOSE 5000
+# Exponer puerto esperado por Fly.io
+EXPOSE 8080
 
-# Comando para ejecutar la app
+# Ejecutar Flask en puerto 8080
 CMD ["python", "backend.py"]
